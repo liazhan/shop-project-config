@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: liazhan-member222
+    name: liazhan-member
 
 ####swagger相关配置
 swagger:
