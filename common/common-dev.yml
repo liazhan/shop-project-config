@@ -2,3 +2,15 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8100/eureka/
+
+spring:
+  cloud:
+    bus:
+      trace:
+        enabled: true
+      enabled: true
+  rabbitmq:
+    host: 47.98.183.103
+    port: 5672
+    username: user
+    password: password
