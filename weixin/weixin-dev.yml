@@ -16,3 +16,12 @@ swagger:
   contact:
     name: liazhan
     email: 33421352+liazhan@users.noreply.github.com
+
+
+wx:
+  mp:
+    configs:
+      - appId: wx342b2a9312d0084c  #微信公众号的appID
+        secret: 33144fa93ee3940fd6d37db8ad28fc0e  #微信公众号的appsecret
+        token: liazhan  #微信公众号的Token
+        aesKey: 111 #微信公众号的EncodingAESKey值,在测试号中测试不需要这个值
