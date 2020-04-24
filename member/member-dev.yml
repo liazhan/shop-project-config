@@ -5,6 +5,29 @@ server:
 spring:
   application:
     name: liazhan-member
+  datasource:
+    druid:
+      # 数据库访问配置, 使用druid数据源
+      db-type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://47.98.183.103:3306/shop-member?serverTimezone=GMT%2b8&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: 123456
+      # 连接池配置
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      # 连接等待超时时间
+      max-wait: 30000
+     # 配置检测可以关闭的空闲连接间隔时间
+      time-between-eviction-runs-millis: 60000
+  ##Jpa配置
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true 
+
 
 ####swagger相关配置
 swagger:
