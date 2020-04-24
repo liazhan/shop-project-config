@@ -5,6 +5,16 @@ server:
 spring:
   application:
     name: liazhan-weixin
+  #redis配置
+  redis:
+    host: 47.98.183.103
+    password: 123456
+    port: 6379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
 
 ####swagger相关配置
 swagger:
@@ -17,7 +27,7 @@ swagger:
     name: liazhan
     email: 33421352+liazhan@users.noreply.github.com
 
-
+#wxjava公众号配置
 wx:
   mp:
     configs:
@@ -25,3 +35,17 @@ wx:
         secret: 33144fa93ee3940fd6d37db8ad28fc0e  #微信公众号的appsecret
         token: liazhan  #微信公众号的Token
         aesKey: 111 #微信公众号的EncodingAESKey值,在测试号中测试不需要这个值
+
+
+#公众号回复消息
+weixin:
+  mp:
+    regist:
+      code:
+        message: "已发送验证码，请注意查收！"
+      exists:
+        message: "该手机号码已注册！"
+      frequently:
+        message: "操作频繁，请稍后再试！"
+    default:
+      message: "您的消息我们已经收到！"
