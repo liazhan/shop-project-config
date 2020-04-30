@@ -26,7 +26,18 @@ spring:
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-    show-sql: true 
+    show-sql: true
+  #redis配置
+  redis:
+    host: 47.98.183.103
+    password: 123456
+    port: 6379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
+
 
 
 ####swagger相关配置
@@ -39,4 +50,11 @@ swagger:
   contact:
     name: liazhan
     email: 33421352+liazhan@users.noreply.github.com
+
+
+####会员登陆类型相关配置
+login:
+  type:
+    max: 3
+    value: pc,android,ios
 
