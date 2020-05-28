@@ -1,0 +1,22 @@
+server:
+  port: 8500
+  
+spring:
+  application:
+    name: liazhan-product
+  #es配置
+  data:
+    elasticsearch:
+      cluster-name: docker-cluster
+      cluster-nodes: 47.98.183.103:9300
+
+####swagger相关配置
+swagger:
+  base-package: com.liazhan.product.service
+  title: 微服务电商项目-商品服务接口
+  description: 商品服务
+  version: 1.1
+  terms-of-service-url: www.baidu.com
+  contact:
+    name: liazhan
+    email: 33421352+liazhan@users.noreply.github.com
