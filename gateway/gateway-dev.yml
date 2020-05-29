@@ -25,6 +25,14 @@ spring:
             - Path=/liazhan-weixin/**
           filters:
             - StripPrefix=1
+            
+        - id: service_product
+          uri: lb://LIAZHAN-PRODUCT
+          order: 0
+          predicates:
+            - Path=/liazhan-product/**
+          filters:
+            - StripPrefix=1
 
 logging:
   level:
